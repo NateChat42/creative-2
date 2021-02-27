@@ -28,6 +28,10 @@ h2 {
   text-align: center;
 }
 
+h5 {
+  margin: 15px;
+}
+
 .pokemonSearch {
     text-align: center;
     margin: 15px;
@@ -42,13 +46,11 @@ h2 {
   margin: 40px;
 }
 
-/* .ability1 {
-  margin: 30px;
+.type {
+  display: flex;
+  justify-content: center;
+  margin: 15px;
 }
-
-.ability2 {
-  margin: 30px;
-} */
 
 .form {
     text-align: center;

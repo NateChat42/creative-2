@@ -10,9 +10,9 @@ fetch(url)
         let ability = "";
         ability += '<div>';
         for (let i = 0; i < json.results.length; i++) {
-            ability += '<p class="ability">';
+            ability += '<h5 class="ability">';
             ability += capitalizeFirstLetter(json.results[i].name);
-            ability += '</p>';
+            ability += '</h5>';
         }
         ability += '</div>';
         document.getElementById("abilityColumn1").innerHTML = ability;
@@ -26,9 +26,9 @@ fetch(url2)
         let ability = "";
         ability += '<div>';
         for (let i = 0; i < json.results.length; i++) {
-            ability += '<p  class="ability">';
+            ability += '<h5 class="ability">';
             ability += capitalizeFirstLetter(json.results[i].name);
-            ability += '</p>';
+            ability += '</h5>';
         }
         ability += '</div>';
         document.getElementById("abilityColumn2").innerHTML = ability;
