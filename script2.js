@@ -19,7 +19,7 @@ document.getElementById("abilitySubmit").addEventListener("click", function (eve
             ability += '<h4>' + capitalizeFirstLetter(json.name) + "</h4>";
             ability += '<h6>' + json.effect_entries[1].effect + '</h6>';
             ability += '</div>';
-            ability += '<h4>Check out some other abilities!</h4>';
+            ability += '<h4>Check out another ability!</h4>';
             document.getElementById("abilityResults").innerHTML = ability;
         });
 
