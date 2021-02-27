@@ -19,26 +19,36 @@
     color: #000000 !important;
   }
 
-/* #pokemonSubmit {
-    display: flex;
-    justify-content: center;
-    margin: 15px;
+h1 {
+  margin: 15px;
 }
 
-#pokemonInput {
-    display: flex;
-    justify-content: center;
-    margin: 15px;
-} */
-
-h1 {
-    margin: 15px;
+h2 {
+  margin: 15px;
+  text-align: center;
 }
 
 .pokemonSearch {
     text-align: center;
     margin: 15px;
 }
+
+.abilities {
+  display: flex;
+  justify-content: center;
+}
+
+.ability {
+  margin: 40px;
+}
+
+/* .ability1 {
+  margin: 30px;
+}
+
+.ability2 {
+  margin: 30px;
+} */
 
 .form {
     text-align: center;
