@@ -1,3 +1,7 @@
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+}
+
 document.getElementById("pokemonSubmit").addEventListener("click", function(event) {
     event.preventDefault();
     const value = document.getElementById("pokemonInput").value;
@@ -10,8 +14,31 @@ document.getElementById("pokemonSubmit").addEventListener("click", function(even
         return response.json();
       }).then(function(json) {
         let results = "";
-      results += '<h2>Pokemon #' + json.id + ": "+ json.species.name +"</h2>"
+      results += '<h2>Pokemon #' + json.id + ": "+ capitalizeFirstLetter(json.species.name) + "</h2>";
+      results += 'Regular Sprite: '
       results += '<img src=' + json.sprites.front_default + '>';
+      results += 'Shiny Sprite: '
+      results += '<img src=' + json.sprites.front_shiny + '>';
+      if (json.types.length === 1) {
+        results += '<h4>Type:</h4>';
+      } else {
+        results += '<h4>Types:</h4>';
+      }
+      for (i = 0; i < json.types.length; i++) {
+        results += '<p>' + capitalizeFirstLetter(json.types[i].type.name) + '</p>';
+      }
+      if (json.abilities.length === 1) {
+        results += '<h4>Ability:</h4>';
+      } else {
+        results += '<h4>Abilities:</h4>';
+      }
+      for (i = 0; i < json.abilities.length; i++) {
+        results += '<p>' + capitalizeFirstLetter(json.abilities[i].ability.name) + '</p>';
+      }
+      results += '<h4>' + "Base Stats: "+'</h4>';
+      for (i = 0; i < json.stats.length; i++) {
+        results += '<p>' + json.stats[i].stat.name + ': ' + json.stats[i].base_stat + '</p>';
+      }
     //   for (let i=0; i < json.length; i++) {
 	// results += '<img class="icon" src="http://openweathermap.org/img/w/' + json.weather[i].icon + '.png"/>';
     //   }

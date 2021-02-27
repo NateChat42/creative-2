@@ -1,0 +1,71 @@
+* {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    align-items: center;
+  }
+
+  .bg-dark {
+    background-color: #ac0202 !important;
+    }
+
+  .navbar-brand {
+    color: white !important
+  }
+  
+  .navbar-dark .navbar-nav .nav-link {
+    color: white !important;
+  }
+  
+  .navbar-nav:hover .nav-link:hover {
+    color: #000000 !important;
+  }
+
+/* #pokemonSubmit {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+
+#pokemonInput {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+} */
+
+h1 {
+    margin: 15px;
+}
+
+.pokemonSearch {
+    text-align: center;
+    margin: 15px;
+}
+
+.form {
+    text-align: center;
+    margin: 15px;
+}
+
+footer {
+    text-align: center;
+}
+
+  /* Mobile Styles */
+  @media only screen and (max-width: 400px) {
+    body {
+      background-color: #bee8f8;
+    }
+  }
+  
+  /* Tablet Styles */
+  @media only screen and (min-width: 401px) and (max-width: 960px) {
+    body {
+      background-color: #b2c5e0;
+    }
+  }
+  
+  /* Desktop Styles */
+  @media only screen and (min-width: 961px) {
+    body {
+      background-color: #bfd6d8;
+    }
+  }
