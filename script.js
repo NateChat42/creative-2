@@ -41,19 +41,23 @@ document.getElementById("pokemonSubmit").addEventListener("click", function (eve
       }
       document.getElementById("pokemonResults").innerHTML = results;
     });
-  //   weeklyForecast = "<h1>Weekly Forecast</h1>";
-  //   document.getElementById("abilityForecast").innerHTML = weeklyForecast;
-  //   const url2 = "https://pokeapi.co/api/v2/" + value;
-  //   fetch(url2)
-  //     .then(function(response) {
-  //       return response.json();
-  //     }).then(function(json) {
-  //         let forecast = "";
-  //         for (let i=0; i < json.list.length; i++) {
-  //       forecast += '<div class="forecast">';
-
-  //       forecast += '</div>'
-  //         }
-  //         document.getElementById("abilityResults").innerHTML = forecast;
-  //     });
+  // abilityResults = "<h1>Weekly Forecast</h1>";
+  // document.getElementById("abilityResults").innerHTML = abilityResults;
 });
+
+function getAbilities() {
+  const url2 = "https://pokeapi.co/api/v2/ability?limit=100";
+  fetch(url2)
+    .then(function (response) {
+      return response.json();
+    }).then(function (json) {
+      let ability = "";
+      ability += '<div class="ability">';
+      for (let i = 0; i < json.results.length; i++) {
+        ability += json.results[i].name
+      }
+      ability += '</div>';
+      document.getElementById("abilityResults").innerHTML = ability;
+    });
+}
+getAbilities;
