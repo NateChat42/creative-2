@@ -28,7 +28,16 @@ h2 {
   text-align: center;
 }
 
+h3 {
+  margin: 15px;
+}
+h4 {
+  margin: 15px;
+}
 h5 {
+  margin: 15px;
+}
+h6 {
   margin: 15px;
 }
 
@@ -37,9 +46,15 @@ h5 {
     margin: 15px;
 }
 
+.abilitySearch {
+  text-align: center;
+  margin: 15px;
+}
+
 .abilities {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .ability {
