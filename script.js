@@ -17,7 +17,7 @@ document.getElementById("pokemonSubmit").addEventListener("click", function (eve
       results += '<h2>Pokemon #' + json.id + ": " + capitalizeFirstLetter(json.species.name) + "</h2>";
       results += 'Regular Sprite: '
       results += '<img src=' + json.sprites.front_default + '>';
-      results += 'Shiny Sprite: '
+      results += '<br />Shiny Sprite: '
       results += '<img src=' + json.sprites.front_shiny + '>';
       if (json.types.length === 1) {
         results += '<h4>Type:</h4>';
